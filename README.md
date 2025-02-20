@@ -102,7 +102,4 @@ JWT_SECRET: Secret key for JWT token generation.
 
 AES_SECRET_KEY: Secret key for AES encryption.
 
-License
-
-This project is licensed under the MIT License.
 
