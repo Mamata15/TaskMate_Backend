@@ -40,10 +40,58 @@ Ensure you have the following installed:
 
 ---
 
-## Installation & Setup  
-
-### 1️⃣ Clone the Repository  
+### 1️⃣ **Clone the Repository**  
 ```sh
 git clone <repository-url>
 cd backend
 
+2️⃣ Configure Database
+Update application.properties or application.yml with your database credentials:
+
+properties
+Copy
+Edit
+spring.datasource.url=jdbc:postgresql://localhost:5432/taskdb
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+3️⃣ Build & Run
+sh
+Copy
+Edit
+mvn clean install
+mvn spring-boot:run
+🌍 API ENDPOINTS
+🔐 Authentication
+Login – POST /auth/login
+Register – POST /auth/register
+👤 User Management
+Get All Users – GET /users
+Get User by ID – GET /users/{id}
+Update User – PUT /users/{id}
+Delete User – DELETE /users/{id}
+📌 Task Management
+Create Task – POST /tasks
+Get All Tasks – GET /tasks
+Get Task by ID – GET /tasks/{id}
+Update Task – PUT /tasks/{id}
+Delete Task – DELETE /tasks/{id}
+🔒 SECURITY
+JWT is used for authentication.
+AES encryption secures sensitive data.
+Protected Endpoints require a Bearer token in the request header.
+🌎 ENVIRONMENT VARIABLES
+Set the following environment variables in your system or .env file:
+
+sh
+Copy
+Edit
+JWT_SECRET=your_jwt_secret_key
+AES_SECRET_KEY=your_aes_secret_key
+🤝 CONTRIBUTING
+Contributions are welcome! If you'd like to improve this project, follow these steps:
+
+Fork the repository
+Create a new branch (git checkout -b feature-branch)
+Commit your changes (git commit -m "Add new feature")
+Push to your branch (git push origin feature-branch)
+Create a Pull Request
